@@ -1,0 +1,9 @@
+{% for slide in slide_list %}
+<div class="carousel-item {{ slide.sl_css }}">
+    <img src="{{ slide.sl_img.url }}" class="d-block w-100 " alt="{{ slide.sl_title }}">
+    <!--                    <div class="carousel-caption d-none d-md-block">-->
+    <!--                        <h5 class="slider_h">{{ slide.sl_title }}</h5>-->
+    <!--                        <p class="slider_p">{{ slide.sl_text }}</p>-->
+    <!--                    </div>-->
+</div>
+{% endfor %}

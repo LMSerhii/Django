@@ -1,0 +1,53 @@
+{% extends 'pizza/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<!--baner-->
+
+<!--<div class="px-4 pt-5 my-5 text-center border-bottom">-->
+<!--    <h1 class="display-4 fw-bold text-body-emphasis">Збери піцу сам</h1>-->
+<!--    <div class="col-lg-6 mx-auto">-->
+<!--        <p class="lead mb-4">Збери піцу сам з доступних інгредієнтів в нашому конструкторі піц</p>-->
+<!--        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">-->
+<!--            <button type="button" class="btn btn-outline-success btn-lg px-4 me-sm-3">Перейти в конструктор</button>-->
+<!--            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Замовити готову піцу</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="overflow-hidden">-->
+<!--        <div class="container px-5">-->
+<!--            <img src="{% static 'pizza/images/slidepizza.png' %}" alt="Example image"-->
+<!--                 width="900" height="300" loading="lazy">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div> -->
+
+<!--baner-->
+
+<!--producr-->
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for p in pizzas %}
+        <div class="col">
+            <div class="card h-100 border-light" style="max-width: 22rem;">
+                <img src="{{ p.photo.url }}" class="card-img-top" alt="{{ p.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ p.title }}</h5>
+                    <p class="card-text">{{ p.ingredients }}</p>
+                    <div class="hstack gap-8">
+                        <div class="p-2 h5">{{ p.price }} грн</div>
+                        <div class="p-2 ms-auto">
+                            <button type="button" class="btn btn-outline-success float-end">Обрати</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!--product-->
+
+{% endblock content %}

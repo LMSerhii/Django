@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-sm">
+    <h1 class="header-settings-index">Введите дату рождения</h1>
+
+    <form action="{% url 'result' %}" method="get" class="form">
+        <div class="mb-3">
+            <input class="form-control" type="text" id="birthday" name="birthday" value="29.12.1985">
+            <br><input class="form-control" type="text" id="name" name="name" value="Сергей">
+            <div class="d-flex gap-2 justify-content-center py-5">
+                <button class="btn btn-primary d-inline-flex align-items-center" type="submit">
+                    Узнать
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock content %}
