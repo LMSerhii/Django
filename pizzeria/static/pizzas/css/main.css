@@ -1,0 +1,21 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background: rgb(238, 235, 240);
+    color: rgb(5, 94, 94);
+    /* background-image: url('../img/top-view-of-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-and-corn-on-black-wooden.jpg'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+p {
+    font-size: 40px;
+
+}
+
+.pizza {
+    background: #fff;
+}
